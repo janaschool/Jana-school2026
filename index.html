@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة الصف التاسع</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">9</div>
+      <div>
+        <strong>بوابة الصف التاسع</strong>
+        <span>تعلم • تدرب • أنجز</span>
+      </div>
+    </div>
+    <nav>
+      <button data-view="home" class="active">الرئيسية</button>
+      <button data-view="lessons">الدروس</button>
+      <button data-view="quiz">الاختبارات</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="view active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">منصة تعليمية للصف التاسع</span>
+          <h1>دراستك صارت<br><em>أسهل وأمتع.</em></h1>
+          <p>دروس مرتبة، أنشطة تفاعلية، واختبارات قصيرة تساعدك تراجعي مواد الصف التاسع بطريقة بسيطة.</p>
+          <button class="primary big" onclick="show('lessons')">ابدئي التعلم ←</button>
+        </div>
+        <div class="hero-art">
+          <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#ebe9ff"/></linearGradient>
+</defs>
+<rect x="70" y="50" width="460" height="340" rx="38" fill="url(#g)" opacity=".98"/>
+<rect x="115" y="95" width="250" height="180" rx="16" fill="#fff" stroke="#dedbff" stroke-width="5"/>
+<path d="M145 230 C190 130 235 245 285 155 C320 95 340 190 345 205" fill="none" stroke="#655cf6" stroke-width="12" stroke-linecap="round"/>
+<circle cx="250" cy="150" r="12" fill="#ffcf67"/>
+<rect x="400" y="105" width="82" height="82" rx="22" fill="#ffe8a9"/>
+<text x="441" y="159" text-anchor="middle" font-size="43" font-family="Arial" font-weight="700" fill="#655cf6">9</text>
+<rect x="400" y="215" width="82" height="82" rx="22" fill="#dff5ed"/>
+<text x="441" y="270" text-anchor="middle" font-size="35" font-family="Arial">✦</text>
+<circle cx="160" cy="350" r="45" fill="#655cf6"/>
+<text x="160" y="365" text-anchor="middle" font-size="34" font-family="Arial" fill="#fff">✓</text>
+<circle cx="245" cy="350" r="45" fill="#ffcf67"/>
+<text x="245" y="364" text-anchor="middle" font-size="30" font-family="Arial" fill="#5b4e20">π</text>
+<circle cx="330" cy="350" r="45" fill="#dff5ed"/>
+<text x="330" y="364" text-anchor="middle" font-size="28" font-family="Arial" fill="#3a7b67">Aa</text>
+</svg>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="section-title">
+          <div>
+            <span class="eyebrow">المواد</span>
+            <h2>اختاري مادتك</h2>
+          </div>
+          <span id="progressText" class="progress-text">0%</span>
+        </div>
+        <div class="progress"><div id="progressBar"></div></div>
+        <div id="subjects" class="subject-grid"></div>
+      </section>
+    </section>
+
+    <section id="lessons" class="view">
+      <div class="page-head">
+        <span class="eyebrow">المحتوى الدراسي</span>
+        <h1>الدروس</h1>
+        <p>اختاري المادة ثم افتحي الدرس الذي تريدينه.</p>
+        <select id="filter">
+          <option value="all">كل المواد</option>
+        </select>
+      </div>
+      <div id="lessonGrid" class="lesson-grid"></div>
+    </section>
+
+    <section id="lesson" class="view">
+      <button class="back" onclick="show('lessons')">← العودة للدروس</button>
+      <div id="detail"></div>
+    </section>
+
+    <section id="quiz" class="view">
+      <div class="page-head">
+        <span class="eyebrow">تقييم سريع</span>
+        <h1>الاختبارات</h1>
+        <p>اختبري نفسك في أي مادة.</p>
+      </div>
+      <div id="quizPicker" class="quiz-picker"></div>
+      <div id="quizArea"></div>
+    </section>
+  </main>
+
+  <footer>بوابة الصف التاسع • بالتوفيق في دراستك 🌷</footer>
+  <script src="app.js"></script>
+</body>
+</html>
