@@ -133,3 +133,5 @@ footer{text-align:center;padding:28px;color:#999db0;font-size:12px}
   .hero h1{font-size:35px}
   main{padding:18px 13px 45px}
 }
+
+.student-card{width:min(100%,480px);background:#fff;color:#29235d;border-radius:25px;padding:24px;box-shadow:0 18px 35px rgba(25,20,90,.18)}.student-card h2{margin-top:0;color:#655cf6}.student-card>div{background:#f7f6ff;border:1px solid #ebe9ff;border-radius:14px;padding:12px;margin:9px 0;line-height:1.8}.student-card .tw{display:grid;grid-template-columns:1fr 1fr;gap:9px;background:transparent;border:0;padding:0}.student-card .tw span{background:#f7f6ff;border:1px solid #ebe9ff;border-radius:14px;padding:12px}@media(max-width:600px){.student-card{padding:18px}.student-card .tw{grid-template-columns:1fr}}
